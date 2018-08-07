@@ -141,21 +141,20 @@
             <!-- ARTICLE 1 -->
             <article>
                 <div class="post-image">
-                    <img src="{{ asset('blog_assets/img/img-post-1.jpg')}}" alt="post image 1"> 
+                    <img src="{{$post->thumbnail}}" alt="post image 1"> 
                 </div>
-                <div class="category">
-                    <a href="#">IMG</a>
-                </div>
+            <!--     <div class="category">
+                    <a href="#">{{$post->thumbnail}}</a>
+                </div> -->
                 <div class="post-text">
                     <span class="date">07 Jun 2016</span>
-                    <h2>MAECENAS CONSECTETUR</h2>
+                    <h2>{{$post->title}}</h2>
                 </div>                 
                 <div class="post-text text-content">
                     <div class="post-by">Post By <a href="#">AD-Theme</a></div>                    
-                    <div class="text"><p>Sed ut massa tristique, vehicula tellus in, fringilla ligula. Phasellus dignissim est sed egestas fringilla. Vivamus egestas nec dolor vitae egestas. Nulla a ante odio. Vestibulum lobortis tincidunt nulla non varius. Fusce ornare, ante nec ullamcorper scelerisque, <a href="#">nisl erat sollicitudin lacus</a>, ac sodales ligula sem eu risus. Fusce laoreet interdum eros, nec finibus mi rutrum eu.
-                    <br><br>
-                    Nulla at sem in nisi pulvinar porta consequat a quam. Proin vehicula placerat est, vulputate dapibus elit scelerisque sit amet. Sed at condimentum justo, accumsan molestie ligula. Phasellus porttitor urna sit amet lorem rutrum luctus ut molestie nulla. Nulla facilisi. Pellentesque quis nibh ut arcu bibendum tincidunt.                 
-                    </p>                    
+                    <div class="text">  
+                        {{$post->content}}
+                                    
                     <div class="gallery">
                         <div class="item-gallery-left">
                             <img src="{{ asset('blog_assets/img/img-post-gallery-1.jpg')}}">

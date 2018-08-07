@@ -16,7 +16,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
 
-             $table->string('name')->nullable(); // tên thư mục
+            $table->string('name')->nullable(); // tên thư mục
             $table->tinyInteger('parent_id')->nullable()->comment('chứa id category parent'); // chức id cha 
             $table->string('thumbnail')->nullable(); // lưu đường dẫn ảnh thu nhỏ của thư mục
             $table->string('slug')->unique(); // đường đẫn - name không dấu, và nối liền nhau bằng dấu -

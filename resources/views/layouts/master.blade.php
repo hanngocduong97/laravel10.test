@@ -65,22 +65,12 @@
                     </li>
                     <li><a href="#">FEATURES <i class="icon-arrow-down8"></i></a>
                         <ul class="submenu">
-                            <li><a href="page.html">Page</a></li>
-                            <li><a href="page-with-right-sidebar.html">Page + Right Sidebar</a></li>
-                            <li><a href="page-with-left-sidebar.html">Page + Left Sidebar</a></li>                            
-                            <li><a href="post.html">Post Full Width</a></li>
-                            <li><a href="post-with-right-sidebar.html">Post + Right Sidebar</a></li>
-                            <li><a href="post-with-left-sidebar.html">Post + Left Sidebar</a></li>
-                            <li><a href="no-sticky.html">No Sticky Menu</a></li>
-                            <li><a href="no-slider.html">No Slider</a></li> 
-                            <li><a href="#">Submenu <i class="icon-arrow-right8"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Item 1</a></li>
-                                    <li><a href="#">Item 2</a></li>
-                                    <li><a href="#">Item 3</a></li>
-                                    <li><a href="#">Item 4</a></li>
-                                </ul>
-                            </li>                                                                                            
+                            
+                            @foreach($categories as $category)
+                                <li><a href="{{asset('')}}category/{{$category->id}}">{{$category->name}} </a>
+                                              
+                            </li>  
+                            @endforeach                                                                              
                         </ul>                
                     </li>                                     
                     <li><a href="#">BLOG <i class="icon-arrow-down8"></i></a>
@@ -92,8 +82,9 @@
                             <li><a href="blog-3-columns.html">Blog 3 Columns</a></li>                                                                      
                         </ul>                
                     </li> 
-                    <li><a href="{{asset('about')}}">ABOUT US</a></li>
+                    <li><a href="{{asset('admin/login')}}">Login</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
+                    
             </ul>
         
         </nav>
